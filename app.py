@@ -113,8 +113,6 @@ st.markdown("""
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         div.stButton > button {
-            display: block;
-            margin: 15px auto;
             background: linear-gradient(45deg, #3498db, #2ecc71);
             color: white;
             font-size: 18px;
@@ -161,12 +159,19 @@ st.markdown("""
             color: #333333;
             animation: fadeIn 1s ease-in-out;
         }
+        /* ✅ NEW: Center buttons in all environments */
+        div[data-testid="stButton"] {
+            display: flex;
+            justify-content: center;
+        }
+
         @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown("<div class='main-title'>🥗 Healthy Bytes: Smart Diet Guide</div>", unsafe_allow_html=True)
 st.markdown("<div class='sub-title'>Your AI-powered Health Assistant</div>", unsafe_allow_html=True)
@@ -178,6 +183,8 @@ with tabs[0]:
     st.markdown("<h2>🔍 Predict Dish Health</h2>", unsafe_allow_html=True)
     dish_name = st.text_input("Enter Dish Name", placeholder="e.g., Rasmalai, Jeera Rice")
 
+    # ✅ Button Wrapped in Centered Div
+    st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
     if st.button("Predict Health Category", key="predict_btn"):
         if dish_name.strip():
             with st.spinner("🔍 Wait For Some Seconds"):
@@ -205,6 +212,7 @@ with tabs[0]:
                     st.markdown(f"<div class='alert warning'><span style='color:#333'>💡 Did you mean: {', '.join(result['suggestions'])}</span></div>", unsafe_allow_html=True)
         else:
             st.markdown("<div class='alert warning'><span style='color:#333'>⚠️ Please enter a dish name.</span></div>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)  # ✅ Close center div
 
 with tabs[1]:
     st.markdown("<h2>🥦 Recommend Dishes by Health Label</h2>", unsafe_allow_html=True)
