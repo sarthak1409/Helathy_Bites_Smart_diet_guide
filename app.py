@@ -4,7 +4,7 @@ import pandas as pd
 import time
 import base64
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://helathy-bites-smart-diet-guide-1.onrender.com/"
 
 st.set_page_config(page_title="Healthy Bytes: Smart Diet Guide", page_icon="🥗", layout="wide")
 
@@ -276,4 +276,5 @@ with tabs[2]:
             st.dataframe(pd.DataFrame(result["recommendations"]))
             st.download_button("📥 Download CSV", pd.DataFrame(result["recommendations"]).to_csv(index=False), "recommendations_goals.csv", "text/csv")
         else:
+
             st.markdown(f"<div class='alert error'><span style='color:#333'>{result['message']}</span></div>", unsafe_allow_html=True)
