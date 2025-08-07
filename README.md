@@ -3,6 +3,12 @@
 An AI-powered system that helps users make informed food choices by predicting the healthiness category of Indian dishes and recommending smart alternatives based on nutritional goals.
 
 ---
+### 📺 Demo Preview
+
+<iframe width="560" height="315" src="[Youtube_Link](https://youtu.be/0e9u4apbOKs)"  
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  
+allowfullscreen></iframe>
+---
 
 ## 🚀 Key Features
 
