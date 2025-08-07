@@ -18,4 +18,4 @@ The dataset contains nutritional values for various Indian dishes and has been u
 
 - Dishes high in protein and fiber with low sugar and sodium tend to be classified as **Healthy**.
 - Popular unhealthy dishes tend to have higher sugar and saturated fats.
-- We used MinMaxScaler and a classification model (e.g. RandomForest or similar) trained on these features.
+- We used StandardScaler and a classification model (e.g. RandomForest or similar) trained on these features.
