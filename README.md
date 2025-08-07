@@ -6,7 +6,7 @@ An AI-powered system that helps users make informed food choices by predicting t
 ### 📺 Demo Preview
 
 
-[![Watch the demo](https://i.ytimg.com/vi/0e9u4apbOKs/hqdefault.jpg)](https://youtu.be/F2rR2-ECtck)
+[![Watch the demo](main_image_2.png)](https://youtu.be/F2rR2-ECtck)
 
 ---
 
